@@ -1,0 +1,64 @@
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  width: 90%;
+  border-bottom: 1px solid silver;
+  margin-left: 36px;
+  margin-top: 20px;
+}
+
+.todoItem input[type="checkbox"] {
+  display: none;
+}
+
+.todoItem input[type="checkbox"] + *::before {
+  content: "";
+  display: inline-block;
+  vertical-align: bottom;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.3rem;
+  border-radius: 10%;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: var(--darkCyan);
+  flex-shrink: 0;
+}
+
+.todoItem input[type="checkbox"]:checked {
+  color: var(--darkCyan);
+}
+.todoItem input[type="checkbox"]:checked + *::before {
+  content: "✓";
+  color: white;
+  text-align: center;
+  background: var(--darkCyan);
+  border-color: var(--darkCyan);
+  font-size: 12px;
+}
+
+.todoItem input[type="checkbox"] + * {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+}
+
+.todoItem span  {
+  width: 100px;
+  margin-left: 35px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  text-transform: capitalize;
+  color: #666666;
+}
+
+.todoItem button {
+  height: 13px;
+  width: 13px;
+  color: var(--green);
+  background: transparent;
+}

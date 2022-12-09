@@ -1,0 +1,46 @@
+.popUpContainer {
+  position: fixed;
+  top: -120%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popUpContainer.active {
+  top: 0;
+}
+.popUpContainer .inner {
+  width: 400px;
+  height: 200px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+.popUpContainer .inner p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: var(--darkCyan);
+  margin-top: 52px;
+  margin-bottom: 40px;
+}
+
+.popUpContainer .inner .popUpBtn {
+  background: none;
+  margin: 0 40px;
+  width: 25px;
+  height: 28px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: capitalize;
+  color: var(--green);
+}
