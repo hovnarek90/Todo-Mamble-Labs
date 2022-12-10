@@ -5,7 +5,6 @@ export default function popUp({ onDelete, setPopUpId }) {
   const  onYes=()=>{
     onDelete()
     setPopUpId(null)
-
   }
   
   return (

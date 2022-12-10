@@ -1,9 +1,9 @@
 import React from "react";
 import "./todoItem.css";
 
-export default function ({ todo, onChange, onDelete }) {
+export default function ({ todo, onChange, onDelete, hiddenTodo}) {
   return (
-    <div className="todoItem">
+    <div className={todo.completed&&hiddenTodo? "display-none": "todoItem"}>
       <input
         type="checkbox"
         id={todo.id}
@@ -16,11 +16,17 @@ export default function ({ todo, onChange, onDelete }) {
         }}
       />
       <label htmlFor={todo.id}>
-        <span>{todo.text}</span>
+        <span className={todo.completed ? "span-completed" : "span-text"}>
+          {todo.text}
+        </span>
       </label>
-      <button onClick={()=>{
-        onDelete(todo)
-      }}>X</button>
+      <button
+        onClick={() => {
+          onDelete(todo);
+        }}
+      >
+        X
+      </button>
     </div>
   );
 }
